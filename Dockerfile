@@ -16,4 +16,4 @@ RUN dotnet publish -c release -o /app -r linux-x64 --self-contained false --no-r
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-focal-amd64
 WORKDIR /app
 COPY --from=build /app ./
-ENTRYPOINT ["dotnet", "ItemAPI.dll"]
+ENTRYPOINT ["./ItemApi"]
